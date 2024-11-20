@@ -1,4 +1,4 @@
-import collection from "../collection.js";
+import collection from "./collection.js";
 
 const card = (
   ref: number,

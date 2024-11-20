@@ -1,6 +1,6 @@
 import collection from "./collection.js";
-import "./components/_darkMode.js";
-import card from "./components/_card.js";
+import "./darkMode.js";
+import card from "./card.js";
 const scrollNavbar = () => {
     const header = document.querySelector(".header");
     const themeSwitch = document.querySelector(".dark-mode-switch");
