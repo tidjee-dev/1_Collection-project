@@ -1,0 +1,84 @@
+@use '../variables' as *;
+@use "../mixins";
+
+.hero {
+  height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+
+  &-title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &-description {
+    font-size: 1.2rem;
+  }
+
+  &-scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    animation: bounce 1s infinite;
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-0.5rem);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+
+  &-input {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    max-width: 250px;
+    border-radius: $border-radius-sm;
+    border: 1px solid $color-light-subtle;
+    outline: none;
+  }
+
+  &-button {
+    padding: 0.5rem 1rem;
+    background-color: $color-primary;
+    color: $color-light;
+    border: none;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-primary-subtle;
+    }
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @include mixins.media($container-breakpoint-md) {
+    flex-direction: row;
+    justify-content: space-evenly;
+
+  }
+}

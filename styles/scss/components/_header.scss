@@ -1,0 +1,40 @@
+@use "../variables" as *;
+
+.header {
+  background-color: $background-color-nav-dark;
+  margin: 1rem 4rem;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: $box-shadow-dark-large;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-nav {
+    width: 90%;
+    max-width: $container-width;
+    margin: 0 auto;
+
+    &-title {
+      color: $color-light;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+
+      @media (min-width: $container-breakpoint-sm) {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+      }
+    }
+  }
+
+  &.scrolled {
+    margin: 0;
+    box-shadow: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,25 @@
+@use "variables" as *;
+
+body {
+
+  &.theme-light {
+    background-color: $background-color-light;
+    color: $color-dark;
+
+    & .header {
+      background-color: $background-color-nav-light;
+      box-shadow: $box-shadow-light-large;
+
+      &-nav {
+        &-title {
+          color: $color-dark;
+        }
+      }
+    }
+
+    & .card {
+      background-color: $background-color-light;
+      box-shadow: $box-shadow-light-default;
+    }
+  }
+}

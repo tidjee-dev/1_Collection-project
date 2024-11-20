@@ -1,0 +1,269 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body.theme-light {
+  background-color: #f2f2f2;
+  color: #1c1c1c;
+}
+body.theme-light .header {
+  background-color: #f8f9fa;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+body.theme-light .header-nav-title {
+  color: #1c1c1c;
+}
+body.theme-light .card {
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #f4f4f4;
+  background-color: #444;
+}
+
+.container {
+  width: 90%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.dark-mode-switch {
+  position: absolute;
+  top: 2.5rem;
+  right: 1rem;
+}
+.dark-mode-switch button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #f4f4f4;
+  font-size: 1.5rem;
+}
+
+.header {
+  background-color: #333;
+  margin: 1rem 4rem;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-nav {
+  width: 90%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+.header-nav-title {
+  color: #f4f4f4;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+@media (min-width: 576px) {
+  .header-nav-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+}
+.header.scrolled {
+  margin: 0;
+  box-shadow: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-radius: 0;
+}
+
+.hero {
+  height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.hero-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.hero-description {
+  font-size: 1.2rem;
+}
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.search-input {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 5px;
+  border: 1px solid rgba(244, 244, 244, 0.1);
+  outline: none;
+}
+.search-button {
+  padding: 0.5rem 1rem;
+  background-color: #0055a5;
+  color: #f4f4f4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.search-button:hover {
+  background-color: rgba(0, 85, 165, 0.1);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .card-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 16px;
+  width: 100%;
+  color: #1c1c1c;
+}
+@media (min-width: 768px) {
+  .card {
+    max-width: 300px;
+  }
+}
+.card-body {
+  position: relative;
+}
+.card-img {
+  width: 100%;
+  height: 12rem;
+  object-fit: scale-down;
+  border-radius: 10px;
+}
+.card-release-year {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.75rem;
+  color: #f4f4f4;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  background-color: #0055a5;
+}
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.card-count-container {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+  gap: 1rem;
+  width: 100%;
+}
+.card-count-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #1c1c1c;
+}
+.card-count-item img {
+  width: 1rem;
+  height: 1rem;
+}
+.card-weight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  color: #1c1c1c;
+  margin: 0.5rem 0;
+}
+.card-weight img {
+  width: 1rem;
+  height: 1rem;
+}
+.card-link-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.5rem 0;
+}
+.card-link-title {
+  font-weight: bold;
+}
+.card-link-item {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+.card-link-item:hover {
+  color: #0055a5;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=styles.css.map */

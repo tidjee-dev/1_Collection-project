@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Tidjee's LEGO Collection</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="header-nav">
+        <h1 class="header-nav-title">Tidjee's LEGO Collection</h1>
+      </nav>
+      <div class="dark-mode-switch">
+        <button id="theme-toggle" aria-label="Toggle Theme">🌞</button>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <section class="hero">
+        <h2 class="hero-title">Welcome to Tidjee's LEGO Collection</h2>
+        <p class="hero-description">
+          Explore a collection of LEGO sets and minifigures from around
+          the world.
+        </p>
+        <span class="hero-scroll-indicator">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+               class="bi bi-arrow-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                  d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L8.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+          </svg>
+          Scroll
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+               class="bi bi-arrow-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                  d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L8.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+          </svg>
+        </span>
+      </section>
+
+      <section>
+        <div class="search">
+          <input type="text" class="search-input" id="search-input" placeholder="Search by name">
+          <button type="button" class="search-button" id="search-button">Search</button>
+        </div>
+        <div class="card-container"></div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/script.js"></script>
+  </body>
+
+</html>

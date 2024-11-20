@@ -1,0 +1,103 @@
+@use "../variables" as *;
+@use "../mixins";
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: $border-radius-md;
+  padding: 16px;
+  background-color: $background-color-light;
+  box-shadow: $box-shadow-dark-default;
+  margin-bottom: 16px;
+  width: 100%;
+  color: $color-dark;
+
+  @include mixins.media($container-breakpoint-md) {
+    max-width: 300px;
+  }
+
+  &-body {
+    position: relative;
+  }
+
+  &-img {
+    width: 100%;
+    height: 12rem;
+    object-fit: scale-down;
+    border-radius: $border-radius-md;
+  }
+
+  &-release-year {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.75rem;
+    color: $color-light;
+    padding: 0.25rem 0.5rem;
+    border-radius: $border-radius-sm;
+    background-color: $color-primary;
+  }
+
+  &-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  &-count {
+    &-container {
+      display: flex;
+      justify-content: center;
+      margin: 0.5rem 0;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      color: $color-dark;
+
+      img {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+
+  &-weight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    color: $color-dark;
+    margin: 0.5rem 0;
+
+    img {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  &-link {
+
+    &-container {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 0.5rem 0;
+    }
+
+    &-title {
+      font-weight: bold;
+    }
+
+    &-item {
+      text-decoration: none;
+      color: $color-dark;
+
+      &:hover {
+        color: $color-primary;
+        text-decoration: underline;
+      }
+    }
+  }
+}

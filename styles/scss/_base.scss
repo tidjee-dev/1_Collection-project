@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color-light;
+  background-color: $background-color-dark;
+
+}
+
+.container {
+  width: 90%;
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+.dark-mode-switch {
+  position: absolute;
+  top: 2.5rem;
+  right: 1rem;
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: $color-light;
+    font-size: 1.5rem;
+  }
+}
